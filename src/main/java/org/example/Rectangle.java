@@ -4,17 +4,16 @@ import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
-import java.awt.*;
 import java.util.Scanner;
 
 @Entity
 @DiscriminatorValue("Rectangle")
 public class Rectangle extends Shape {
 
-    @Column(name = "a")
+    @Column(name = "A")
     private double a;
 
-    @Column(name = "b")
+    @Column(name = "B")
     private double b;
 
     public Rectangle(Color color, double a, double b) {
@@ -26,6 +25,7 @@ public class Rectangle extends Shape {
     public Rectangle() {
         this(new Color(255,255,255),1,1);
     }
+
 
     public double getA() {
         return a;
